@@ -1,0 +1,28 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CompanySalesController!{% endblock %}
+
+
+
+{% block body %}
+<h1>Companies</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Company Name</th>
+                <th>Total Sales</th>
+                <th>Sales Value</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for data in companiesSales %}
+            <tr>
+                <td align="center">{{ data.companyName }}</td>
+                <td align="center">{{ data.totalSales }}</td>
+                <td align="center">{{ data.totalAmount }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
